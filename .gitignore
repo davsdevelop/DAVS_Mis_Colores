@@ -1,0 +1,28 @@
+# Entornos Virtuales de Python
+venv/
+.venv/
+env/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos generados por Reflex (Frontend y Estados)
+.web/
+.reflex/
+.states/
+node_modules/
+assets/external/
+
+# Base de datos local
+*.db
+*.sqlite3
+
+# Archivos del Sistema Operativo
+.DS_Store
+.AppleDouble
+
+# Archivos específicos a ignorar
+contexto_proyecto.txt
+empaquetar1.py
