@@ -2,13 +2,14 @@
 # -----------------------------------------------------------------------------
 # Layout general
 # -----------------------------------------------------------------------------
-# Cambiamos a un gris oscuro profundo/pizarra para el fondo de la pantalla
 PAGE = "flex flex-col min-h-screen w-full bg-[#0F172A]" 
-CONTENT_WRAPPER = "max-w-[1400px] w-full mx-auto px-6 py-6"
-GRID_3_COLS = "grid grid-cols-3 gap-5 w-full"
-COL_SPAN_2 = "col-span-2"
-COL_SPAN_1 = "col-span-1"
+CONTENT_WRAPPER = "max-w-[1400px] w-full mx-auto px-4 sm:px-6 py-6" # Un poco menos de padding lateral en móviles
 
+# CAMBIO: 1 columna en móvil, 3 en pantallas grandes
+GRID_3_COLS = "grid grid-cols-1 lg:grid-cols-3 gap-5 w-full" 
+# CAMBIO: Ocupa todo el ancho en móvil, 2 columnas en pantallas grandes
+COL_SPAN_2 = "col-span-1 lg:col-span-2" 
+COL_SPAN_1 = "col-span-1"
 # -----------------------------------------------------------------------------
 # Tarjetas contenedoras
 # -----------------------------------------------------------------------------
@@ -21,9 +22,8 @@ CARD_SCROLLABLE = (
 # -----------------------------------------------------------------------------
 # Navbar
 # -----------------------------------------------------------------------------
-# Ajustamos el borde inferior para que sea sutil sobre el fondo negro
 NAVBAR_WRAPPER = "sticky top-0 z-50 border-b border-white/[0.08]"
-NAVBAR_INNER = "flex items-center gap-4 max-w-[1400px] mx-auto w-full px-6 py-4"
+NAVBAR_INNER = "flex flex-wrap items-center justify-between gap-4 max-w-[1400px] mx-auto w-full px-4 sm:px-6 py-4"
 NAVBAR_LOGO = "flex items-center gap-2"
 NAVBAR_LOGO_ICON = "text-red-500"
 # Cambiamos text-black a text-white para que resalte sobre el fondo negro del navbar
@@ -71,7 +71,7 @@ COLOR_CARD_REMOVE_BTN = (
 # -----------------------------------------------------------------------------
 # Palette editor
 # -----------------------------------------------------------------------------
-EDITOR_HEADER = "flex items-center mb-6"
+EDITOR_HEADER = "flex flex-wrap items-center mb-6 gap-4" 
 EDITOR_TITLE = "text-2xl font-bold tracking-tight text-gray-900"
 EDITOR_SUBTITLE = "text-sm text-gray-400 mt-0.5"
 

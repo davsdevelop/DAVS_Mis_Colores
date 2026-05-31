@@ -117,7 +117,7 @@ def palette_editor() -> rx.Component:
                     PaletteState.current_colors,
                     lambda color, i: color_card_with_remove(color, i),
                 ),
-                columns="5",
+                columns=rx.breakpoints(initial="2", sm="3", md="4", lg="5"),
                 spacing="3",
                 width="100%",
             ),
